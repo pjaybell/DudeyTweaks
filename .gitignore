@@ -34,6 +34,4 @@ build
 .gradle
 
 # minecraft forge
-run/logs/*.gz
-run/logs/*.log
-run/saves
+run
