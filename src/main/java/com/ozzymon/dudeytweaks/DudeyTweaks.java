@@ -37,7 +37,7 @@ public class DudeyTweaks
         // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
-        DudeyTweaksItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        RegistryHandler.init();
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -83,6 +83,7 @@ public class DudeyTweaks
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
             // register a new block here
             LOGGER.info("HELLO from Register Block");
+            LOGGER.info(blockRegistryEvent.getName());
         }
     }
 }
